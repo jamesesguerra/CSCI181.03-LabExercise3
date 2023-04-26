@@ -5,7 +5,7 @@
 //  Created by Luis Ligunas on 4/26/23.
 //
 
-import UIKit
+import Foundation
 
 class SearchMoviesListViewController: UITableViewController {
 
