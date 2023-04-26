@@ -39,15 +39,5 @@ class SearchMoviesListViewController: UITableViewController {
 		cell.textLabel?.text = movieResults[indexPath.row].title
 		return cell
 	}
-
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
-		//		guard let pokemonViewController = storyboard?.instantiateViewController(withIdentifier: "pokemonVC") as? PokemonViewController
-		//		else { return }
-		//		pokemonViewController.pokemonNumber = indexPath.row + 1
-		//		navigationController?.pushViewController(pokemonViewController, animated: true)
-	}
-
-
 }
 
