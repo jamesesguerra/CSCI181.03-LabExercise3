@@ -5,7 +5,7 @@
 //  Created by Luis Ligunas on 4/26/23.
 //
 
-import Foundation
+import UIKit
 
 class SearchMoviesListViewController: UITableViewController {
 
@@ -24,9 +24,12 @@ class SearchMoviesListViewController: UITableViewController {
 			guard let self = self,
 				  let response = response
 			else { return }
+            
 
 			self.movieResults = response.search
-			self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
 		}
 	}
 

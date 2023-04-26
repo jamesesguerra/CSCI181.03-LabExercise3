@@ -22,7 +22,8 @@ class MovieListViewController: UITableViewController {
 
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
-		title = NSLocalizedString("navigation_title", comment: "")
+        title = NSLocalizedString("navigation-title", comment: "haha")
+
 	}
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +40,7 @@ class MovieListViewController: UITableViewController {
 		tableView.deselectRow(at: indexPath, animated: true)
 
 		guard let searchMoviesListViewController = storyboard?.instantiateViewController(withIdentifier: "searchMoviesListID") as? SearchMoviesListViewController else { return }
-		searchMoviesListViewController.queryString = queryStrings[1]
+        searchMoviesListViewController.queryString = queryStrings[indexPath.row]
 		navigationController?.pushViewController(searchMoviesListViewController, animated: true)
 	}
 }

@@ -32,6 +32,7 @@
 		A0C8467A29F8A8F20019B71E /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		A0C8468029F8A98D0019B71E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A0C8468329F8AA080019B71E /* SearchMoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesListViewController.swift; sourceTree = "<group>"; };
+		FE9F1E0529F8D3FC004645CD /* fil-PH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fil-PH"; path = "fil-PH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +193,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0C8468029F8A98D0019B71E /* en */,
+				FE9F1E0529F8D3FC004645CD /* fil-PH */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
