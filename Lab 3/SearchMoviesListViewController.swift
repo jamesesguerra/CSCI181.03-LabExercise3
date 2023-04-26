@@ -27,6 +27,7 @@ class SearchMoviesListViewController: UITableViewController {
             
 
 			self.movieResults = response.search
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

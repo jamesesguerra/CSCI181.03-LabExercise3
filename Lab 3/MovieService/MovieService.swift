@@ -23,28 +23,14 @@ class MovieService {
 		let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
 			var searchResponse: SearchResponse?
 			defer { completion(searchResponse) }
-//            print("here")
-//			guard error == nil,
-//				  let httpResponse = response as? HTTPURLResponse,
-//				  (200...299).contains(httpResponse.statusCode),
-//				  let data = data,
-//				  let response = try? JSONDecoder().decode(SearchResponse.self, from: data)
-//
-//			else { return }
-//			searchResponse = response
-            if error != nil {
-                return
-            }
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode)
-            else {
-                return
-            }
-            
-            if let data = data,
-               let response = try? JSONDecoder().decode(SearchResponse.self, from: data) {
-                searchResponse = response
-            }
+			guard error == nil,
+				  let httpResponse = response as? HTTPURLResponse,
+				  (200...299).contains(httpResponse.statusCode),
+				  let data = data,
+				  let response = try? JSONDecoder().decode(SearchResponse.self, from: data)
+
+			else { return }
+			searchResponse = response
             
 		}
 		task.resume()
